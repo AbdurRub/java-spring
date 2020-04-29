@@ -6,13 +6,7 @@ FROM maven:3.5-jdk-8-alpine
 
 MAINTAINER Abdur-Rub
 
-WORKDIR /app
-# cloning bitbucket repo
-RUN git clone https://abdurrub:pucitnc13@https://github.com/AbdurRub/java-spring.git
+WORKDIR  /app
+COPY  /target/employee-0.0.1-SNAPSHOT.jar /app
 
-# Running mvn step to make jar file
-RUN mvn package
-
-WORKDIR /app
-COPY --from=1 /app/target/employee-0.0.1-SNAPSHOT.jar /app
-
+CMD["java -jar /app/employee-0.0.1-SNAPSHOT.jar"]
