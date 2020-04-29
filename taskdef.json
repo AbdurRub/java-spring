@@ -1,0 +1,18 @@
+[
+  {
+    "name": "employee-management-system",
+    "image": "<IMAGE1_NAME>",
+    "cpu": 10,
+    "memory": 512,
+    "essential": true,
+    "portMappings": [
+      {
+        "containerPort": 80,
+        "hostPort": 80
+      }
+    ],
+    "requiresCompatibilities": [
+      "FARGATE"
+    ]
+  }
+]
