@@ -8,7 +8,7 @@ MAINTAINER Abdur-Rub
 
 WORKDIR /app
 # cloning bitbucket repo
-RUN git clone -b bamboo-development-plan-abdurrub https://abdurrub:nbs00591@bitbucket.org/northbay/cdk-train.git
+RUN git clone https://abdurrub:pucitnc13@https://github.com/AbdurRub/java-spring.git
 
 # Running mvn step to make jar file
 RUN mvn package
