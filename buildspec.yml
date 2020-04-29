@@ -14,7 +14,7 @@ phases:
     commands:
       - echo Build started on "27 April 2020"
       - echo Compiling the Employee Application...
-      - $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$IMAGE_REPO_NAME:$CODEBUILD_RESOLVED_SOURCE_VERSION .
+      - docker build -t $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$IMAGE_REPO_NAME:$CODEBUILD_RESOLVED_SOURCE_VERSION .
   post_build:
     commands:
       - echo Build completed on "27 April 2020"
