@@ -1,12 +1,7 @@
-
-#  java image
-FROM openjdk:8-jre-alpine
-#  maven image
-FROM maven:3.5-jdk-8-alpine
+FROM openjdk:8-jdk-alpine
 
 MAINTAINER Abdur-Rub
 
-WORKDIR  /app
-COPY  /target/employee-0.0.1-SNAPSHOT.jar /app
+COPY  /target/employee-0.0.1-SNAPSHOT.jar .
 
-CMD["java -jar /app/employee-0.0.1-SNAPSHOT.jar"]
+CMD["java -jar employee-0.0.1-SNAPSHOT.jar"]
